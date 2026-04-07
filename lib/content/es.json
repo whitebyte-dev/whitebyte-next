@@ -1,0 +1,78 @@
+{
+  "nav": {
+    "links": ["Solutions", "Process", "Work", "Contact"],
+    "cta": "Hablemos →"
+  },
+  "hero": {
+    "badge": "✦ Soluciones digitales a medida",
+    "headline": "Simplicidad hecha software",
+    "subheadline": "Convertimos los problemas de tu negocio en soluciones digitales que funcionan.",
+    "ctaPrimary": "Empecemos →",
+    "ctaSecondary": "Ver nuestro trabajo"
+  },
+  "solutions": {
+    "title": "Solutions",
+    "subtitle": "Identificamos el problema. Construimos la solución.",
+    "items": [
+      {
+        "icon": "Globe",
+        "title": "Presencia Digital",
+        "hook": "Tus clientes te buscan online. ¿Estás ahí?"
+      },
+      {
+        "icon": "Layers",
+        "title": "Sitios & Aplicaciones",
+        "hook": "Tu negocio, convertido en una experiencia digital que vende."
+      },
+      {
+        "icon": "Zap",
+        "title": "Automatización",
+        "hook": "Trabajá menos, producí más. El software que trabaja por vos."
+      }
+    ]
+  },
+  "process": {
+    "title": "Process",
+    "subtitle": "Simple por fuera. Serio por dentro.",
+    "steps": [
+      { "number": "01", "title": "Escuchamos", "description": "Entendemos tu negocio, tus clientes y qué problema querés resolver." },
+      { "number": "02", "title": "Diseñamos", "description": "Creamos una solución a medida. Sin templates genéricos." },
+      { "number": "03", "title": "Construimos", "description": "Desarrollamos rápido, con calidad y con vos en el loop." },
+      { "number": "04", "title": "Lanzamos", "description": "Salimos al aire y te acompañamos en el camino." }
+    ]
+  },
+  "work": {
+    "title": "Work",
+    "subtitle": "Lo que construimos habla por nosotros.",
+    "urquiza": {
+      "name": "La Urquiza",
+      "description": "Plataforma web institucional completa con gestión de inscripciones, noticias y administración.",
+      "stack": "Next.js · TypeScript · Tailwind",
+      "badge": "En desarrollo",
+      "beforeLabel": "Antes",
+      "afterLabel": "Después"
+    },
+    "comingSoon": "Próximos proyectos en camino."
+  },
+  "contact": {
+    "title": "Hablemos",
+    "subtitle": "Contanos qué necesitás. Sin compromiso, sin tecnicismos.",
+    "email": "contacto@whitebyte.dev",
+    "whatsapp": "Escribinos por WhatsApp →",
+    "form": {
+      "name": "Nombre",
+      "email": "Email",
+      "company": "Empresa / Rubro",
+      "companyOptional": "(opcional)",
+      "message": "¿Qué necesitás?",
+      "submit": "Enviar →",
+      "submitting": "Enviando...",
+      "success": "¡Mensaje enviado! Te contactamos pronto.",
+      "error": "Algo salió mal. Por favor intentá de nuevo."
+    }
+  },
+  "footer": {
+    "links": ["Solutions", "Process", "Work", "Contact"],
+    "copyright": "© 2026 Whitebyte. Todos los derechos reservados."
+  }
+}
