@@ -9,7 +9,9 @@
       "Bash(python src/ui-ux-pro-max/scripts/search.py \"scroll animation reveal stagger\" --domain ux -n 5)",
       "Bash(python src/ui-ux-pro-max/scripts/search.py \"form contact validation accessible\" --domain ux -n 5)",
       "Bash(python src/ui-ux-pro-max/scripts/search.py \"navbar navigation fixed blur\" --domain ux -n 3)",
-      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)",
+      "Bash(npm install:*)",
+      "Bash(npx shadcn@latest init --defaults)"
     ]
   }
 }
