@@ -2,6 +2,7 @@ import { Navbar } from "@/components/layout/Navbar"
 import { Hero } from "@/components/sections/Hero"
 import { Solutions } from "@/components/sections/Solutions"
 import { Process } from "@/components/sections/Process"
+import { Portfolio } from "@/components/sections/Portfolio"
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
         <Hero />
         <Solutions />
         <Process />
+        <Portfolio />
       </main>
     </>
   )
