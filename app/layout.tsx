@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Sora, Inter } from "next/font/google"
 import "./globals.css"
+import { LenisProvider } from "@/components/providers/LenisProvider"
 
 const sora = Sora({
   subsets: ["latin"],
@@ -43,7 +44,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className={`${sora.variable} ${inter.variable}`}>
-      <body>{children}</body>
+      <body>
+        <LenisProvider>{children}</LenisProvider>
+      </body>
     </html>
   )
 }
