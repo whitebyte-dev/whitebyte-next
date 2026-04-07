@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/flami/.claude/plugins/marketplaces/ui-ux-pro-max-skill/**)",
+      "Bash(python skills/ui-ux-pro-max/scripts/search.py \"tech consultancy digital solutions minimal dark premium\" --design-system -p \"Whitebyte\" -f markdown)",
+      "Bash(python3 skills/ui-ux-pro-max/scripts/search.py \"tech consultancy digital solutions minimal dark premium\" --design-system -p \"Whitebyte\" -f markdown)",
+      "Bash(python src/ui-ux-pro-max/scripts/search.py \"tech consultancy digital solutions minimal dark premium\" --design-system -p \"Whitebyte\" -f markdown)",
+      "Bash(python src/ui-ux-pro-max/scripts/search.py \"hero landing minimal dark\" --domain landing -n 3)",
+      "Bash(python src/ui-ux-pro-max/scripts/search.py \"scroll animation reveal stagger\" --domain ux -n 5)",
+      "Bash(python src/ui-ux-pro-max/scripts/search.py \"form contact validation accessible\" --domain ux -n 5)",
+      "Bash(python src/ui-ux-pro-max/scripts/search.py \"navbar navigation fixed blur\" --domain ux -n 3)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --yes)"
+    ]
+  }
+}
