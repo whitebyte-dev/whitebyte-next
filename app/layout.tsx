@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${sora.variable} ${inter.variable}`}>
+    <html lang="es" className={`dark ${sora.variable} ${inter.variable}`}>
       <body>
         <LenisProvider>{children}</LenisProvider>
       </body>

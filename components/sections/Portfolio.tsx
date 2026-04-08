@@ -1,12 +1,19 @@
 "use client"
 
 import { useRef } from "react"
+import dynamic from "next/dynamic"
 import { useGSAP } from "@gsap/react"
 import { gsap } from "@/lib/gsap/register"
 import { SectionHeading } from "@/components/ui/SectionHeading"
-import { CompareSlider } from "@/components/ui/CompareSlider"
 import { Badge } from "@/components/ui/Badge"
 import content from "@/lib/content/es.json"
+
+// SSR desactivado — react-compare-slider genera estilos inline en el cliente
+// que difieren del servidor, causando hydration mismatch
+const CompareSlider = dynamic(
+  () => import("@/components/ui/CompareSlider").then((m) => m.CompareSlider),
+  { ssr: false }
+)
 
 export function Portfolio() {
   const containerRef = useRef<HTMLElement>(null)
