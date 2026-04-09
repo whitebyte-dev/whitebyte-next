@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Invalid JSON" }, { status: 400 })
   }
 
-  const { nombre, email, empresa, mensaje } = body as Record<string, string>
+  const { nombre, email, telefono, empresa, tipo, presupuesto, canal, mensaje } = body as Record<string, string>
 
   if (!nombre || typeof nombre !== "string" || nombre.trim().length === 0) {
     return NextResponse.json({ error: "Nombre es requerido" }, { status: 400 })
@@ -28,7 +28,11 @@ export async function POST(request: NextRequest) {
     await sendContactEmail({
       nombre: nombre.trim(),
       email: email.trim(),
+      telefono: telefono?.trim(),
       empresa: empresa?.trim(),
+      tipo: tipo?.trim(),
+      presupuesto: presupuesto?.trim(),
+      canal: canal?.trim(),
       mensaje: mensaje.trim(),
     })
 

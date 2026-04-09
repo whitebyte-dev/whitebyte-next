@@ -1,10 +1,11 @@
 import { Navbar } from "@/components/layout/Navbar"
-import { Footer } from "@/components/layout/Footer"
 import { Hero } from "@/components/sections/Hero"
+import { TechCarousel } from "@/components/sections/TechCarousel"
 import { Solutions } from "@/components/sections/Solutions"
 import { Process } from "@/components/sections/Process"
 import { Portfolio } from "@/components/sections/Portfolio"
-import { Contact } from "@/components/sections/Contact"
+import { CtaBanner } from "@/components/sections/CtaBanner"
+import { Footer } from "@/components/layout/Footer"
 
 export default function Home() {
   return (
@@ -12,10 +13,11 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
+        <TechCarousel />
         <Solutions />
         <Process />
         <Portfolio />
-        <Contact />
+        <CtaBanner />
       </main>
       <Footer />
     </>

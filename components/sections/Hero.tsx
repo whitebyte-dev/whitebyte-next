@@ -3,126 +3,142 @@
 import { useRef } from "react"
 import { useGSAP } from "@gsap/react"
 import { gsap } from "@/lib/gsap/register"
-import { Badge } from "@/components/ui/Badge"
+import Link from "next/link"
+import { ChevronDown, ArrowRight } from "lucide-react"
 import content from "@/lib/content/es.json"
 
 export function Hero() {
-  const containerRef = useRef<HTMLElement>(null)
-  const badgeRef = useRef<HTMLDivElement>(null)
-  const headlineRef = useRef<HTMLHeadingElement>(null)
-  const subRef = useRef<HTMLParagraphElement>(null)
-  const ctasRef = useRef<HTMLDivElement>(null)
+  const sectionRef = useRef<HTMLElement>(null)
 
   useGSAP(
     () => {
       const mm = gsap.matchMedia()
-
       mm.add(
         {
           reduceMotion: "(prefers-reduced-motion: reduce)",
           noReduceMotion: "(prefers-reduced-motion: no-preference)",
         },
-        (context) => {
-          const { reduceMotion } = context.conditions!
-
-          if (reduceMotion) {
-            gsap.set(
-              [badgeRef.current, headlineRef.current, subRef.current, ctasRef.current],
-              { autoAlpha: 1, y: 0 }
-            )
+        (ctx) => {
+          if (ctx.conditions!.reduceMotion) {
+            gsap.set(".hero-fade", { autoAlpha: 1, y: 0 })
             return
           }
-
-          const wordSpans = headlineRef.current?.querySelectorAll(".word-span") ?? []
-
-          const tl = gsap.timeline({
-            defaults: { ease: "power2.out" },
+          gsap.from(".hero-fade", {
+            autoAlpha: 0,
+            y: 30,
+            duration: 0.8,
+            stagger: 0.14,
+            ease: "power2.out",
           })
-
-          tl.from(badgeRef.current, { autoAlpha: 0, y: 20, duration: 0.5 })
-            .from(
-              wordSpans,
-              {
-                autoAlpha: 0,
-                y: 40,
-                duration: 0.6,
-                stagger: { each: 0.08, from: "start" },
-              },
-              "-=0.2"
-            )
-            .from(subRef.current, { autoAlpha: 0, y: 20, duration: 0.5 }, "-=0.3")
-            .from(
-              ctasRef.current?.children ?? [],
-              {
-                autoAlpha: 0,
-                y: 20,
-                duration: 0.4,
-                stagger: 0.1,
-              },
-              "-=0.2"
-            )
         }
       )
-
       return () => mm.revert()
     },
-    { scope: containerRef }
+    { scope: sectionRef }
   )
 
-  const words = content.hero.headline.split(" ")
+  const headlineParts = content.hero.headline.split("hecha")
 
   return (
     <section
-      ref={containerRef}
+      ref={sectionRef}
       id="hero"
-      className="relative flex min-h-dvh items-center justify-center px-6 pt-16"
+      className="relative flex min-h-dvh items-center justify-center overflow-hidden px-8 pb-16"
     >
-      {/* Radial gradient background glow */}
+      {/* Vignette */}
+      <div
+        className="pointer-events-none absolute inset-0 z-[1]"
+        aria-hidden="true"
+        style={{
+          background: "radial-gradient(ellipse at center, transparent 30%, hsl(0 0% 3%) 100%)",
+        }}
+      />
+
+      {/* Geometric background */}
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.07]"
+        aria-hidden="true"
+        style={{
+          backgroundImage: "url('/assets/background/qqquad.svg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
+      />
+
+      {/* Double breathing glow — gray */}
       <div
         className="pointer-events-none absolute inset-0 flex items-center justify-center"
         aria-hidden="true"
       >
-        <div className="h-[600px] w-[600px] rounded-full bg-accent-glow blur-3xl" />
+        <div
+          className="absolute h-[700px] w-[700px] rounded-full bg-[hsl(30_40%_45%_/_0.12)] blur-[140px]"
+          style={{ animation: "breathe 6s ease-in-out infinite" }}
+        />
+        <div
+          className="absolute h-[450px] w-[450px] rounded-full bg-[hsl(25_35%_40%_/_0.09)] blur-[120px]"
+          style={{ animation: "breathe-alt 8s ease-in-out infinite" }}
+        />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-4xl text-center">
-        <div ref={badgeRef} className="mb-8 flex justify-center">
-          <Badge variant="accent">{content.hero.badge}</Badge>
+      <div className="relative z-10 mx-auto max-w-3xl text-center">
+        {/* Badge */}
+        <div className="hero-fade mb-8">
+          <span className="badge-shimmer-outer inline-flex">
+            <span className="inline-flex items-center rounded-full bg-background px-5 py-2 text-xs font-medium tracking-wide text-text-secondary">
+              Digital Product Studio
+            </span>
+          </span>
         </div>
 
-        <h1
-          ref={headlineRef}
-          className="font-display text-5xl font-bold leading-tight text-text-primary md:text-7xl lg:text-8xl"
-        >
-          {words.map((word, i) => (
-            <span key={i} className="word-span inline-block">
-              {word}
-              {i < words.length - 1 ? "\u00A0" : ""}
-            </span>
-          ))}
+        {/* Headline — "hecha" in DM Serif Display italic */}
+        <h1 className="hero-fade font-display text-5xl font-bold leading-[1.08] tracking-tight text-text-primary sm:text-6xl md:text-7xl lg:text-8xl">
+          {headlineParts[0]}
+          <span className="font-[family-name:var(--font-serif-accent)] italic font-normal text-text-secondary">
+            hecha
+          </span>
+          {headlineParts[1]}
         </h1>
 
-        <p
-          ref={subRef}
-          className="mx-auto mt-6 max-w-2xl text-lg text-text-secondary md:text-xl"
-        >
+        {/* Subheadline */}
+        <p className="hero-fade mx-auto mt-8 max-w-lg text-lg leading-relaxed text-text-secondary">
           {content.hero.subheadline}
         </p>
 
-        <div ref={ctasRef} className="mt-10 flex flex-wrap justify-center gap-4">
-          <a
-            href="#contact"
-            className="inline-flex items-center justify-center rounded-md bg-accent px-8 py-3 text-base font-medium text-background transition-colors hover:bg-accent/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+        {/* CTAs */}
+        <div className="hero-fade mt-12 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
+          <Link
+            href="/contacto"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 hover:bg-white/90"
           >
             {content.hero.ctaPrimary}
-          </a>
+            <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
+          </Link>
           <a
-            href="#work"
-            className="inline-flex items-center justify-center rounded-md border border-border px-8 py-3 text-base font-medium text-text-primary transition-colors hover:bg-surface focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent"
+            href="#solutions"
+            className="rounded-full border border-white/[0.10] bg-white/[0.05] px-10 py-4 text-base font-medium text-text-secondary transition-all duration-300 hover:border-white/[0.20] hover:bg-white/[0.08] hover:text-text-primary"
           >
             {content.hero.ctaSecondary}
           </a>
         </div>
+      </div>
+
+      {/* Scroll indicator */}
+      <div
+        className="hero-fade absolute bottom-10 left-1/2 -translate-x-1/2"
+        aria-hidden="true"
+      >
+        <a
+          href="#solutions"
+          className="flex flex-col items-center gap-1.5 text-text-muted transition-colors duration-300 hover:text-text-secondary"
+        >
+          <span className="text-[10px] font-light tracking-[0.25em] uppercase">
+            Scroll
+          </span>
+          <ChevronDown
+            size={16}
+            style={{ animation: "float-down 2.5s ease-in-out infinite" }}
+          />
+        </a>
       </div>
     </section>
   )

@@ -32,6 +32,23 @@ describe("POST /api/contact", () => {
     expect(json.success).toBe(true)
   })
 
+  it("returns 200 with all optional fields", async () => {
+    const req = makeRequest({
+      nombre: "María",
+      email: "maria@test.com",
+      telefono: "+5491155554444",
+      empresa: "Acme",
+      tipo: "Sitio web",
+      presupuesto: "$500 - 2k",
+      canal: "WhatsApp",
+      mensaje: "Necesito una landing page",
+    })
+    const res = await POST(req)
+    expect(res.status).toBe(200)
+    const json = await res.json()
+    expect(json.success).toBe(true)
+  })
+
   it("returns 400 when nombre is missing", async () => {
     const req = makeRequest({ email: "juan@test.com", mensaje: "Hola" })
     const res = await POST(req)

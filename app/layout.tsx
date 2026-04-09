@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
-import { Sora, Inter } from "next/font/google"
+import { Sora, Inter, Playfair_Display, DM_Serif_Display } from "next/font/google"
 import "./globals.css"
 import { LenisProvider } from "@/components/providers/LenisProvider"
+import { NoiseOverlay } from "@/components/ui/NoiseOverlay"
 
 const sora = Sora({
   subsets: ["latin"],
@@ -17,14 +18,30 @@ const inter = Inter({
   weight: ["400", "500", "600"],
 })
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  style: ["italic"],
+  weight: ["400", "700"],
+})
+
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  variable: "--font-serif-accent",
+  display: "swap",
+  style: ["italic"],
+  weight: ["400"],
+})
+
 export const metadata: Metadata = {
-  title: "Whitebyte — Simplicidad hecha software",
+  title: "Whitebyte | Digital Product Studio",
   description:
-    "Soluciones digitales a medida para tu negocio. Presencia digital, sitios web y automatización.",
+    "Diseñamos y desarrollamos productos digitales a medida. Sitios web, aplicaciones, automatización y consultoría para tu negocio.",
   openGraph: {
-    title: "Whitebyte — Simplicidad hecha software",
+    title: "Whitebyte | Digital Product Studio",
     description:
-      "Soluciones digitales a medida para tu negocio. Presencia digital, sitios web y automatización.",
+      "Diseñamos y desarrollamos productos digitales a medida. Sitios web, aplicaciones, automatización y consultoría para tu negocio.",
     url: "https://whitebyte.dev",
     siteName: "Whitebyte",
     locale: "es_AR",
@@ -32,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Whitebyte — Simplicidad hecha software",
+    title: "Whitebyte | Digital Product Studio",
   },
   metadataBase: new URL("https://whitebyte.dev"),
 }
@@ -43,8 +60,15 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`dark ${sora.variable} ${inter.variable}`}>
+    <html lang="es" className={`dark ${sora.variable} ${inter.variable} ${playfair.variable} ${dmSerif.variable}`}>
       <body>
+        <a
+          href="#hero"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-sm focus:font-medium focus:text-background"
+        >
+          Saltar al contenido
+        </a>
+        <NoiseOverlay />
         <LenisProvider>{children}</LenisProvider>
       </body>
     </html>

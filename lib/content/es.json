@@ -1,78 +1,182 @@
 {
   "nav": {
-    "links": ["Solutions", "Process", "Work", "Contact"],
-    "cta": "Hablemos →"
+    "links": ["Soluciones", "Proceso", "Trabajo", "Nosotros", "Contacto"],
+    "cta": "Hablemos"
   },
   "hero": {
-    "badge": "✦ Soluciones digitales a medida",
+    "badge": "Digital Product Studio",
     "headline": "Simplicidad hecha software",
-    "subheadline": "Convertimos los problemas de tu negocio en soluciones digitales que funcionan.",
-    "ctaPrimary": "Empecemos →",
-    "ctaSecondary": "Ver nuestro trabajo"
+    "subheadline": "Transformamos ideas en productos digitales que resuelven problemas reales. Sin vueltas, sin ruido.",
+    "ctaPrimary": "Iniciá tu proyecto",
+    "ctaSecondary": "Explorar soluciones"
   },
   "solutions": {
-    "title": "Solutions",
-    "subtitle": "Identificamos el problema. Construimos la solución.",
+    "title": "Explora nuestras",
+    "titleAccent": "Soluciones",
+    "subtitle": "Cada negocio tiene desafíos únicos. Nosotros los traducimos en productos digitales concretos, diseñados para resolver, no para decorar.",
     "items": [
       {
         "icon": "Globe",
         "title": "Presencia Digital",
-        "hook": "Tus clientes te buscan online. ¿Estás ahí?"
+        "hook": "Tus clientes te buscan online. Nosotros te ponemos ahí.",
+        "description": "Diseñamos y desarrollamos sitios que posicionan tu marca, generan confianza y convierten visitantes en clientes."
       },
       {
         "icon": "Layers",
         "title": "Sitios & Aplicaciones",
-        "hook": "Tu negocio, convertido en una experiencia digital que vende."
+        "hook": "Tu negocio, convertido en producto digital.",
+        "description": "Desde landing pages hasta plataformas complejas. Construimos experiencias rápidas, escalables y hechas a medida."
       },
       {
         "icon": "Zap",
         "title": "Automatización",
-        "hook": "Trabajá menos, producí más. El software que trabaja por vos."
+        "hook": "Menos trabajo manual. Más resultados.",
+        "description": "Automatizamos los procesos repetitivos de tu negocio para que tu equipo se enfoque en lo que importa."
+      },
+      {
+        "icon": "Search",
+        "title": "SEO & Posicionamiento",
+        "hook": "Que te encuentren cuando te buscan.",
+        "description": "Optimizamos tu sitio para que aparezca en Google. Estructura técnica, contenido y rendimiento pensados para posicionar."
+      },
+      {
+        "icon": "Compass",
+        "title": "Consultoría Digital",
+        "hook": "Estrategia antes que código.",
+        "description": "Analizamos tu operación, identificamos oportunidades y diseñamos un roadmap tecnológico alineado a tus objetivos de negocio."
+      },
+      {
+        "icon": "Sparkles",
+        "title": "Próximamente",
+        "hook": "Algo nuevo está en camino.",
+        "description": "Estamos trabajando en nuevas soluciones. Si tenés una necesidad que no encaja en las anteriores, hablemos."
       }
-    ]
+    ],
+    "cta": "¿Ninguna solución encaja con lo que buscás?",
+    "ctaLink": "Contanos tu caso, lo analizamos sin compromiso."
   },
   "process": {
-    "title": "Process",
-    "subtitle": "Simple por fuera. Serio por dentro.",
+    "title": "Conoce nuestro",
+    "titleAccent": "Proceso",
+    "subtitle": "Cada proyecto sigue un camino claro. Vos sabés qué pasa en cada paso.",
     "steps": [
-      { "number": "01", "title": "Escuchamos", "description": "Entendemos tu negocio, tus clientes y qué problema querés resolver." },
-      { "number": "02", "title": "Diseñamos", "description": "Creamos una solución a medida. Sin templates genéricos." },
-      { "number": "03", "title": "Construimos", "description": "Desarrollamos rápido, con calidad y con vos en el loop." },
-      { "number": "04", "title": "Lanzamos", "description": "Salimos al aire y te acompañamos en el camino." }
+      { "number": "01", "title": "Escuchamos", "description": "Nos sumergimos en tu negocio, tus usuarios y el problema que querés resolver. Antes de pensar en código, entendemos el contexto completo." },
+      { "number": "02", "title": "Diseñamos", "description": "Definimos estructura, flujo y experiencia visual. Todo se valida con vos antes de escribir una sola línea de código." },
+      { "number": "03", "title": "Construimos", "description": "Desarrollo iterativo con entregas frecuentes. Ves el avance en tiempo real, das feedback, y ajustamos sobre la marcha." },
+      { "number": "04", "title": "Lanzamos", "description": "Deploy, monitoreo y acompañamiento post-lanzamiento. No desaparecemos después de entregar, te acompañamos en lo que sigue." }
     ]
   },
   "work": {
-    "title": "Work",
-    "subtitle": "Lo que construimos habla por nosotros.",
+    "title": "Conoce nuestro",
+    "titleAccent": "Portfolio",
+    "subtitle": "Cada proyecto es un caso real. Mirá cómo transformamos ideas en productos.",
     "urquiza": {
-      "name": "La Urquiza",
-      "description": "Plataforma web institucional completa con gestión de inscripciones, noticias y administración.",
-      "stack": "Next.js · TypeScript · Tailwind",
+      "name": "El Terciario Urquiza",
+      "description": "Rediseño integral de la plataforma digital de una institución académica. Sitio público, panel de administración con roles y permisos, autenticación, almacenamiento en la nube y base de datos. Todo desde cero.",
+      "stack": ["Next.js", "TypeScript", "Tailwind", "PostgreSQL", "Redis", "MinIO"],
       "badge": "En desarrollo",
       "beforeLabel": "Antes",
-      "afterLabel": "Después"
+      "afterLabel": "Después",
+      "cta": "Ver caso de estudio"
     },
-    "comingSoon": "Próximos proyectos en camino."
+    "comingSoon": "Próximos proyectos en camino.",
+    "comingSoonCta": "¿Querés ser el siguiente?"
+  },
+  "cta": {
+    "headline": "Tu próximo producto digital",
+    "headlineAccent": "empieza acá",
+    "subtitle": "Contanos tu idea. Nosotros la convertimos en realidad.",
+    "button": "Hablemos"
   },
   "contact": {
-    "title": "Hablemos",
-    "subtitle": "Contanos qué necesitás. Sin compromiso, sin tecnicismos.",
+    "title": "Empecemos a",
+    "titleAccent": "Construir",
+    "subtitle": "Contanos tu idea y te respondemos en menos de 48hs con un plan claro.",
     "email": "contacto@whitebyte.dev",
-    "whatsapp": "Escribinos por WhatsApp →",
+    "whatsapp": "Escribinos por WhatsApp",
+    "availability": "Aceptando proyectos",
+    "timezone": "GMT-3 · Buenos Aires",
     "form": {
       "name": "Nombre",
       "email": "Email",
+      "phone": "Teléfono",
+      "phoneOptional": "(opcional)",
       "company": "Empresa / Rubro",
       "companyOptional": "(opcional)",
-      "message": "¿Qué necesitás?",
-      "submit": "Enviar →",
+      "projectType": "¿Qué necesitás?",
+      "projectTypes": ["Sitio web", "Aplicación", "Automatización", "Consultoría", "Otro"],
+      "budget": "Presupuesto aproximado",
+      "budgets": ["Menos de USD 1.000", "USD 1.000 - 3.000", "USD 3.000 - 8.000", "USD 8.000 - 20.000", "Más de USD 20.000", "No estoy seguro"],
+      "channel": "¿Cómo preferís que te contactemos?",
+      "channels": ["Email", "WhatsApp"],
+      "message": "Contanos tu idea",
+      "submit": "Enviar mensaje",
       "submitting": "Enviando...",
-      "success": "¡Mensaje enviado! Te contactamos pronto.",
-      "error": "Algo salió mal. Por favor intentá de nuevo."
+      "success": "¡Mensaje enviado! Te respondemos pronto.",
+      "error": "Algo salió mal. Intentá de nuevo o escribinos por mail."
+    }
+  },
+  "about": {
+    "badge": "Sobre nosotros",
+    "title": "Productos digitales con",
+    "titleAccent": "estándar propio",
+    "subtitle": "Whitebyte es un estudio digital especializado en diseño, desarrollo y automatización. Cada proyecto que sale de acá lleva el mismo nivel de detalle y calidad, sin importar su tamaño.",
+    "philosophy": {
+      "title": "Cómo",
+      "titleAccent": "trabajamos",
+      "items": [
+        {
+          "icon": "Target",
+          "title": "Negocio primero, código después",
+          "description": "Entendemos el problema antes de escribir una línea. La tecnología es el medio, no el fin."
+        },
+        {
+          "icon": "Focus",
+          "title": "Menos proyectos, más calidad",
+          "description": "Trabajamos con pocos clientes a la vez. Preferimos hacer menos y hacerlo bien."
+        },
+        {
+          "icon": "MessageSquare",
+          "title": "Sin intermediarios",
+          "description": "Hablás directo con quien construye tu producto. Sin capas, sin teléfono descompuesto."
+        },
+        {
+          "icon": "TrendingUp",
+          "title": "Entregar de más, siempre",
+          "description": "Si el estándar es 10, entregamos 20. No es un slogan, es cómo trabajamos."
+        }
+      ]
+    },
+    "origin": {
+      "title": "Por qué",
+      "titleAccent": "Whitebyte",
+      "description": "Whitebyte nace de una idea simple: que cada producto digital que construimos sea algo de lo que estar orgullosos. No nos interesa entregar por cumplir. Nos interesa que el resultado hable por sí solo, que el cliente lo sienta propio y que la calidad se note en cada detalle."
     }
   },
   "footer": {
-    "links": ["Solutions", "Process", "Work", "Contact"],
-    "copyright": "© 2026 Whitebyte. Todos los derechos reservados."
+    "resources": {
+      "title": "Recursos",
+      "links": [
+        { "label": "Soluciones", "href": "/#solutions" },
+        { "label": "Proceso", "href": "/#process" },
+        { "label": "Portfolio", "href": "/#work" }
+      ]
+    },
+    "company": {
+      "title": "Empresa",
+      "links": [
+        { "label": "Contacto", "href": "/contacto" },
+        { "label": "Sobre nosotros", "href": "/nosotros" },
+        { "label": "Política de Privacidad", "href": "/privacidad" }
+      ]
+    },
+    "availability": {
+      "title": "Disponibilidad",
+      "status": "Aceptando proyectos",
+      "email": "contacto@whitebyte.dev",
+      "whatsapp": "Escribinos por WhatsApp",
+      "timezone": "GMT-3 · Buenos Aires"
+    },
+    "copyright": "Whitebyte. Todos los derechos reservados."
   }
 }
