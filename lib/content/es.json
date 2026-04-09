@@ -153,6 +153,48 @@
       "description": "Whitebyte nace de una idea simple: que cada producto digital que construimos sea algo de lo que estar orgullosos. No nos interesa entregar por cumplir. Nos interesa que el resultado hable por sí solo, que el cliente lo sienta propio y que la calidad se note en cada detalle."
     }
   },
+  "notFound": {
+    "title": "Página no",
+    "titleAccent": "encontrada",
+    "subtitle": "La página que buscás no existe o fue movida.",
+    "cta": "Volver al inicio"
+  },
+  "privacy": {
+    "badge": "Legal",
+    "title": "Política de",
+    "titleAccent": "Privacidad",
+    "lastUpdated": "Última actualización: abril 2026",
+    "sections": [
+      {
+        "title": "Información que recopilamos",
+        "content": "Cuando completás el formulario de contacto en nuestro sitio, recopilamos la información que proporcionás voluntariamente: nombre, email, teléfono (opcional), empresa (opcional), tipo de proyecto, presupuesto estimado, canal de contacto preferido y el mensaje que nos escribas. No recopilamos información de forma automática ni utilizamos cookies de seguimiento."
+      },
+      {
+        "title": "Cómo usamos tu información",
+        "content": "Usamos la información exclusivamente para responder a tu consulta y evaluar tu proyecto. No compartimos, vendemos ni cedemos tus datos personales a terceros bajo ninguna circunstancia."
+      },
+      {
+        "title": "Servicios de terceros",
+        "content": "Utilizamos Resend como servicio de envío de emails transaccionales para procesar los mensajes del formulario de contacto. Resend actúa como procesador de datos y está sujeto a sus propias políticas de privacidad. No utilizamos servicios de analítica, publicidad ni rastreo de terceros."
+      },
+      {
+        "title": "Almacenamiento y seguridad",
+        "content": "Los mensajes del formulario se envían directamente a nuestro correo electrónico. No almacenamos tu información en bases de datos propias. La comunicación entre tu navegador y nuestro servidor está protegida mediante HTTPS."
+      },
+      {
+        "title": "Tus derechos",
+        "content": "Podés solicitar la eliminación de cualquier dato personal que nos hayas proporcionado escribiendo a contacto@whitebyte.dev. Respondemos a todas las solicitudes en un plazo de 48 horas hábiles."
+      },
+      {
+        "title": "Cambios en esta política",
+        "content": "Nos reservamos el derecho de actualizar esta política. Cualquier cambio se reflejará en esta página con la fecha de última actualización."
+      },
+      {
+        "title": "Contacto",
+        "content": "Para cualquier consulta sobre privacidad, escribinos a contacto@whitebyte.dev."
+      }
+    ]
+  },
   "footer": {
     "resources": {
       "title": "Recursos",
