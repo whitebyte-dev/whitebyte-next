@@ -16,6 +16,8 @@ const techs = [
   "postgresql",
   "mysql",
   "mongodb",
+  "redis",
+  "minio",
   "docker",
   "git",
   "github",

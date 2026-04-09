@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Whitebyte
+
+Landing page and marketing site for [whitebyte.dev](https://whitebyte.dev).
+
+## Stack
+
+| Layer | Tech |
+|-------|------|
+| Framework | Next.js 16 (App Router) |
+| Language | TypeScript, React 19 |
+| Styling | Tailwind CSS v4 |
+| Animations | GSAP 3.14 + ScrollTrigger + Lenis |
+| Components | Shadcn (Base UI) |
+| Email | Resend + React Email |
+| Tests | Vitest |
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
+cp .env.example .env.local   # add your Resend API key
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev        # Dev server
+npm run build      # Production build
+npm run lint       # ESLint
+npm test           # Run tests
+npm run test:watch # Tests in watch mode
+```
 
-## Learn More
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `RESEND_API_KEY` | Yes | API key from [resend.com](https://resend.com). The contact form won't send emails without it. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+app/
+  page.tsx              # Landing page (assembles all sections)
+  contacto/page.tsx     # Contact page
+  nosotros/page.tsx     # About page
+  api/contact/route.ts  # Contact form endpoint
+components/
+  sections/             # Page sections (Hero, Solutions, Process, etc.)
+  layout/               # Navbar, Footer
+  ui/                   # Reusable primitives (SectionHeading, Badge, etc.)
+lib/
+  content/es.json       # All UI copy — never hardcode strings in components
+  email/                # React Email template + send function
+  gsap/register.ts      # GSAP config — always import from here, not from 'gsap'
+```
 
-## Deploy on Vercel
+## Key Conventions
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**Content** — All copy lives in `lib/content/es.json`. Components read from there.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Styling** — Tailwind v4 config is entirely in `app/globals.css` via `@theme`. There is no `tailwind.config.js`. Use our design tokens (`text-text-primary`, `bg-surface`) not Shadcn tokens directly.
+
+**Animations** — Import GSAP from `@/lib/gsap/register`. Use `autoAlpha` for fades. Wrap animations in `gsap.matchMedia()` to respect `prefers-reduced-motion`.
+
+**Email** — Contact form sends branded HTML emails via Resend + React Email. Template at `lib/email/contact-template.tsx`.
+
+## Deployment
+
+Push to `main` deploys to [Vercel](https://vercel.com). Set `RESEND_API_KEY` in Vercel environment variables before deploying.
