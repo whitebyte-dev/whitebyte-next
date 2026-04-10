@@ -256,7 +256,7 @@ export function Contact() {
               </a>
 
               <a
-                href="https://wa.me/5491100000000"
+                href="https://wa.me/543415159089"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-4 rounded-xl border border-white/[0.06] bg-white/[0.02] p-4 transition-all duration-300 hover:border-white/[0.12] hover:bg-white/[0.04]"

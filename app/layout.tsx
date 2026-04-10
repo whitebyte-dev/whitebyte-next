@@ -3,6 +3,7 @@ import { Sora, Inter, Playfair_Display, DM_Serif_Display } from "next/font/googl
 import "./globals.css"
 import { LenisProvider } from "@/components/providers/LenisProvider"
 import { NoiseOverlay } from "@/components/ui/NoiseOverlay"
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton"
 
 const sora = Sora({
   subsets: ["latin"],
@@ -69,7 +70,10 @@ export default function RootLayout({
           Saltar al contenido
         </a>
         <NoiseOverlay />
-        <LenisProvider>{children}</LenisProvider>
+        <LenisProvider>
+          {children}
+          <WhatsAppButton />
+        </LenisProvider>
       </body>
     </html>
   )

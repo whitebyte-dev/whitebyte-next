@@ -120,7 +120,7 @@ export function Footer() {
                 {f.availability.email}
               </a>
               <a
-                href="https://wa.me/5491100000000"
+                href="https://wa.me/543415159089"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-sm text-text-muted transition-colors duration-200 hover:text-text-secondary"

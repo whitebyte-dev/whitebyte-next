@@ -4,9 +4,16 @@ import { useEffect } from "react"
 import Lenis from "lenis"
 import { gsap, ScrollTrigger } from "@/lib/gsap/register"
 
+declare global {
+  interface Window {
+    __lenis?: Lenis
+  }
+}
+
 export function LenisProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const lenis = new Lenis()
+    window.__lenis = lenis
 
     lenis.on("scroll", ScrollTrigger.update)
 
@@ -17,6 +24,7 @@ export function LenisProvider({ children }: { children: React.ReactNode }) {
     return () => {
       lenis.destroy()
       gsap.ticker.remove(tickerFn)
+      delete window.__lenis
     }
   }, [])
 

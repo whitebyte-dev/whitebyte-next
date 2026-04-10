@@ -29,8 +29,7 @@ export function Navbar() {
   const navigateToSection = useCallback(
     (id: string) => {
       if (isHome) {
-        const el = document.getElementById(id)
-        if (el) el.scrollIntoView({ behavior: "smooth" })
+        window.__lenis?.scrollTo(`#${id}`, { offset: -80 })
       } else {
         router.push(`/#${id}`)
       }
@@ -94,8 +93,7 @@ export function Navbar() {
     if (isHome && window.location.hash) {
       const id = window.location.hash.slice(1)
       setTimeout(() => {
-        const el = document.getElementById(id)
-        if (el) el.scrollIntoView({ behavior: "smooth" })
+        window.__lenis?.scrollTo(`#${id}`, { offset: -80 })
       }, 100)
     }
   }, [isHome, pathname])

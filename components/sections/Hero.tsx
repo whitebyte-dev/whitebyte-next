@@ -113,12 +113,13 @@ export function Hero() {
             {content.hero.ctaPrimary}
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
           </Link>
-          <a
-            href="#solutions"
-            className="rounded-full border border-white/[0.10] bg-white/[0.05] px-10 py-4 text-base font-medium text-text-secondary transition-all duration-300 hover:border-white/[0.20] hover:bg-white/[0.08] hover:text-text-primary"
+          <button
+            type="button"
+            onClick={() => window.__lenis?.scrollTo("#solutions", { offset: -80 })}
+            className="cursor-pointer rounded-full border border-white/[0.10] bg-white/[0.05] px-10 py-4 text-base font-medium text-text-secondary transition-all duration-300 hover:border-white/[0.20] hover:bg-white/[0.08] hover:text-text-primary"
           >
             {content.hero.ctaSecondary}
-          </a>
+          </button>
         </div>
       </div>
 
@@ -127,9 +128,10 @@ export function Hero() {
         className="hero-fade absolute bottom-10 left-1/2 -translate-x-1/2"
         aria-hidden="true"
       >
-        <a
-          href="#solutions"
-          className="flex flex-col items-center gap-1.5 text-text-muted transition-colors duration-300 hover:text-text-secondary"
+        <button
+          type="button"
+          onClick={() => window.__lenis?.scrollTo("#solutions", { offset: -80 })}
+          className="flex cursor-pointer flex-col items-center gap-1.5 text-text-muted transition-colors duration-300 hover:text-text-secondary"
         >
           <span className="text-[10px] font-light tracking-[0.25em] uppercase">
             Scroll
@@ -138,7 +140,7 @@ export function Hero() {
             size={16}
             style={{ animation: "float-down 2.5s ease-in-out infinite" }}
           />
-        </a>
+        </button>
       </div>
     </section>
   )
