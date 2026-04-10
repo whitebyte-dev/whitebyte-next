@@ -153,6 +153,105 @@
       "description": "Whitebyte nace de una idea simple: que cada producto digital que construimos sea algo de lo que estar orgullosos. No nos interesa entregar por cumplir. Nos interesa que el resultado hable por sí solo, que el cliente lo sienta propio y que la calidad se note en cada detalle."
     }
   },
+  "caseStudy": {
+    "urquiza": {
+      "badge": "Caso de estudio",
+      "title": "El Terciario",
+      "titleAccent": "Urquiza",
+      "subtitle": "Rediseño integral de la plataforma digital de un instituto terciario con carreras técnicas en sistemas, desarrollo de software e infraestructura IT.",
+      "overview": {
+        "title": "El",
+        "titleAccent": "desafío",
+        "description": "El Terciario Urquiza es un instituto de formación técnica superior que prepara Analistas de Sistemas, Desarrolladores de Software y Técnicos en Infraestructura IT. Su plataforma digital no estaba a la altura: un WordPress de 2010, horarios en PDFs ilegibles donde se solapaban todas las carreras, inscripciones a exámenes en Google Forms, y una identidad visual con assets de principios de los 2000. Para una institución que forma profesionales de tecnología, la web era una contradicción.",
+        "client": "Instituto Terciario",
+        "industry": "Educación",
+        "duration": "6 meses",
+        "status": "En implementación"
+      },
+      "solution": {
+        "title": "La",
+        "titleAccent": "solución",
+        "description": "No fue solo modernizar la web. Fue repensar toda la experiencia digital de la institución. Se diseñó un sitio público con identidad propia, un panel de administración con roles y permisos configurables, generación de documentos on-demand, y una infraestructura pensada para crecer.",
+        "highlights": [
+          {
+            "icon": "Globe",
+            "title": "Sitio público",
+            "description": "Home, noticias con artículos dinámicos, páginas por carrera con planes de estudio descargables, calendario con horarios, parciales y finales, contacto con formulario, homologaciones, y políticas legales."
+          },
+          {
+            "icon": "Shield",
+            "title": "Panel de administración",
+            "description": "Dashboard con analytics, CRUDs para noticias, carreras, horarios y exámenes, gestión de usuarios con RBAC configurable, audit log, configuración del sistema, y búsqueda global."
+          },
+          {
+            "icon": "FileText",
+            "title": "PDFs on-demand",
+            "description": "Grillas de horarios, correlatividades y documentación generados automáticamente con Puppeteer. El alumno selecciona carrera, año y comisión, y obtiene su horario al instante."
+          },
+          {
+            "icon": "Lock",
+            "title": "Seguridad",
+            "description": "Rate limiting, tracking de IP, digital fingerprinting, sanitización completa, protección contra brute force en el panel y endpoints. Autenticación con JWT y Auth.js."
+          }
+        ]
+      },
+      "comparisons": [
+        {
+          "label": "Home",
+          "before": "/portfolio/urquiza-before.webp",
+          "after": "/portfolio/urquiza-after.webp"
+        },
+        {
+          "label": "Carreras",
+          "before": "/portfolio/urquiza-carreras-before.webp",
+          "after": "/portfolio/urquiza-carreras-after.webp"
+        },
+        {
+          "label": "Horarios",
+          "before": "/portfolio/urquiza-horarios-before.webp",
+          "after": "/portfolio/urquiza-horarios-after.webp"
+        },
+        {
+          "label": "Contacto",
+          "before": "/portfolio/urquiza-contacto-before.webp",
+          "after": "/portfolio/urquiza-contacto-after.webp"
+        }
+      ],
+      "beforeLabel": "Antes",
+      "afterLabel": "Después",
+      "tech": {
+        "title": "Bajo el",
+        "titleAccent": "capó",
+        "stack": [
+          { "name": "Next.js", "role": "Framework fullstack, API routes y server actions" },
+          { "name": "TypeScript", "role": "Tipado estricto en todo el proyecto" },
+          { "name": "Tailwind CSS", "role": "Sistema de diseño y estilos" },
+          { "name": "PostgreSQL", "role": "Base de datos principal" },
+          { "name": "Redis", "role": "Cache, rate limiting, cola de jobs" },
+          { "name": "MinIO", "role": "Almacenamiento S3 self-hosted" },
+          { "name": "Puppeteer", "role": "Generación de PDFs on-demand" },
+          { "name": "Auth.js", "role": "Autenticación con JWT" },
+          { "name": "i18n", "role": "Internacionalización" }
+        ]
+      },
+      "impact": {
+        "title": "El",
+        "titleAccent": "impacto",
+        "items": [
+          { "metric": "500+", "label": "Usuarios activos diarios entre alumnos y administrativos" },
+          { "metric": "3", "label": "Carreras técnicas con planes de estudio 100% digitales" },
+          { "metric": "0", "label": "Documentos manuales. Cada PDF se genera al instante" },
+          { "metric": "24/7", "label": "Acceso desde cualquier dispositivo, en cualquier momento" }
+        ]
+      },
+      "cta": {
+        "headline": "Tu institución merece",
+        "headlineAccent": "otra plataforma",
+        "subtitle": "Si tu sistema actual frena más de lo que ayuda, hablemos. Transformamos operaciones complejas en productos digitales que funcionan.",
+        "button": "Hablemos de tu proyecto"
+      }
+    }
+  },
   "notFound": {
     "title": "Página no",
     "titleAccent": "encontrada",
