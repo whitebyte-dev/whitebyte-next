@@ -160,8 +160,8 @@
       "titleAccent": "Urquiza",
       "subtitle": "Rediseño integral de la plataforma digital de un instituto terciario con carreras técnicas en sistemas, desarrollo de software e infraestructura IT.",
       "overview": {
-        "title": "El",
-        "titleAccent": "desafío",
+        "title": "Entendiendo el",
+        "titleAccent": "Desafío",
         "description": "El Terciario Urquiza es un instituto de formación técnica superior que prepara Analistas de Sistemas, Desarrolladores de Software y Técnicos en Infraestructura IT. Su plataforma digital no estaba a la altura: un WordPress de 2010, horarios en PDFs ilegibles donde se solapaban todas las carreras, inscripciones a exámenes en Google Forms, y una identidad visual con assets de principios de los 2000. Para una institución que forma profesionales de tecnología, la web era una contradicción.",
         "client": "Instituto Terciario",
         "industry": "Educación",
@@ -169,8 +169,8 @@
         "status": "En implementación"
       },
       "solution": {
-        "title": "La",
-        "titleAccent": "solución",
+        "title": "Diseñando la",
+        "titleAccent": "Solución",
         "description": "No fue solo modernizar la web. Fue repensar toda la experiencia digital de la institución. Se diseñó un sitio público con identidad propia, un panel de administración con roles y permisos configurables, generación de documentos on-demand, y una infraestructura pensada para crecer.",
         "highlights": [
           {
@@ -221,7 +221,7 @@
       "afterLabel": "Después",
       "tech": {
         "title": "Bajo el",
-        "titleAccent": "capó",
+        "titleAccent": "Capó",
         "stack": [
           { "name": "Next.js", "role": "Framework fullstack, API routes y server actions" },
           { "name": "TypeScript", "role": "Tipado estricto en todo el proyecto" },
@@ -235,8 +235,8 @@
         ]
       },
       "impact": {
-        "title": "El",
-        "titleAccent": "impacto",
+        "title": "Midiendo el",
+        "titleAccent": "Impacto",
         "items": [
           { "metric": "500+", "label": "Usuarios activos diarios entre alumnos y administrativos" },
           { "metric": "3", "label": "Carreras técnicas con planes de estudio 100% digitales" },

@@ -115,7 +115,7 @@ export function About() {
               const Icon = iconMap[item.icon]
               return (
                 <div key={item.title} className="about-card card-glow-wrap">
-                  <div className="card-glow-inner p-8">
+                  <div className="card-glow-inner p-6 md:p-8">
                     <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03]">
                       {Icon && (
                         <Icon
@@ -140,7 +140,7 @@ export function About() {
 
         {/* Origin */}
         <div className="about-origin mx-auto max-w-3xl text-center">
-          <h2 className="font-display mb-6 text-4xl font-semibold text-text-primary md:text-5xl">
+          <h2 className="font-display mb-6 text-3xl font-semibold text-text-primary sm:text-4xl md:text-5xl">
             {a.origin.title}{" "}
             <span className="font-[family-name:var(--font-serif-accent)] italic font-normal text-text-secondary">
               {a.origin.titleAccent}

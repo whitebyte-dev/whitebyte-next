@@ -112,7 +112,7 @@ export function CaseStudy() {
           </div>
 
           {/* Project meta */}
-          <div className="cs-fade mx-auto grid max-w-2xl grid-cols-2 gap-6 sm:grid-cols-4">
+          <div className="cs-fade mx-auto grid max-w-2xl grid-cols-2 gap-4 sm:gap-6 sm:grid-cols-4">
             {[
               { label: "Cliente", value: c.overview.client },
               { label: "Industria", value: c.overview.industry },
@@ -166,7 +166,7 @@ export function CaseStudy() {
           <div className="cs-fade">
             <SectionHeading
               title="Antes y"
-              titleAccent="después"
+              titleAccent="Después"
               subtitle="El mismo instituto, otra experiencia. Compará sección por sección cómo cambió la plataforma."
               className="mb-16"
             />
@@ -179,7 +179,7 @@ export function CaseStudy() {
                 key={comp.label}
                 type="button"
                 onClick={() => setActiveComparison(i)}
-                className={`cursor-pointer rounded-full px-5 py-2.5 text-sm font-medium transition-all duration-300 ${
+                className={`cursor-pointer rounded-full px-5 py-3 text-sm font-medium transition-all duration-300 active:scale-[0.97] ${
                   activeComparison === i
                     ? "border border-white/[0.2] bg-white/[0.08] text-text-primary shadow-[0_0_15px_hsl(0_0%_100%_/_0.04)]"
                     : "border border-white/[0.06] bg-white/[0.02] text-text-muted hover:border-white/[0.1] hover:text-text-secondary"
@@ -242,7 +242,7 @@ export function CaseStudy() {
               const Icon = iconMap[item.icon]
               return (
                 <div key={item.title} className="cs-fade card-glow-wrap">
-                  <div className="card-glow-inner p-8">
+                  <div className="card-glow-inner p-6 md:p-8">
                     <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03]">
                       {Icon && (
                         <Icon
@@ -372,7 +372,7 @@ export function CaseStudy() {
 
         <div className="relative mx-auto max-w-4xl px-8 py-36">
           <div className="cs-fade text-center">
-            <h2 className="font-display text-5xl font-semibold text-text-primary md:text-6xl lg:text-7xl">
+            <h2 className="font-display text-4xl font-semibold text-text-primary sm:text-5xl md:text-6xl lg:text-7xl">
               {c.cta.headline}{" "}
               <span className="font-[family-name:var(--font-serif-accent)] italic font-normal bg-gradient-to-r from-[hsl(35_40%_65%)] to-[hsl(25_35%_55%)] bg-clip-text text-transparent">
                 {c.cta.headlineAccent}
@@ -387,7 +387,7 @@ export function CaseStudy() {
               <span className="pill-glow-wrap group inline-flex">
                 <Link
                   href="/contacto"
-                  className="inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 group-hover:bg-white/95"
+                  className="inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 group-hover:bg-white/95 active:scale-[0.97]"
                 >
                   {c.cta.button}
                   <ArrowRight

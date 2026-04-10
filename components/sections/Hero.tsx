@@ -91,7 +91,7 @@ export function Hero() {
         </div>
 
         {/* Headline — "hecha" in DM Serif Display italic */}
-        <h1 className="hero-fade font-display text-5xl font-bold leading-[1.08] tracking-tight text-text-primary sm:text-6xl md:text-7xl lg:text-8xl">
+        <h1 className="hero-fade font-display text-4xl font-bold leading-[1.08] tracking-tight text-text-primary sm:text-5xl md:text-6xl lg:text-7xl">
           {headlineParts[0]}
           <span className="font-[family-name:var(--font-serif-accent)] italic font-normal text-text-secondary">
             hecha
@@ -108,7 +108,7 @@ export function Hero() {
         <div className="hero-fade mt-12 flex flex-col items-center gap-5 sm:flex-row sm:justify-center">
           <Link
             href="/contacto"
-            className="group inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 hover:bg-white/90"
+            className="group inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 hover:bg-white/90 active:scale-[0.97]"
           >
             {content.hero.ctaPrimary}
             <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5" />
@@ -116,7 +116,7 @@ export function Hero() {
           <button
             type="button"
             onClick={() => window.__lenis?.scrollTo("#solutions", { offset: -80 })}
-            className="cursor-pointer rounded-full border border-white/[0.10] bg-white/[0.05] px-10 py-4 text-base font-medium text-text-secondary transition-all duration-300 hover:border-white/[0.20] hover:bg-white/[0.08] hover:text-text-primary"
+            className="cursor-pointer rounded-full border border-white/[0.10] bg-white/[0.05] px-10 py-4 text-base font-medium text-text-secondary transition-all duration-300 hover:border-white/[0.20] hover:bg-white/[0.08] hover:text-text-primary active:scale-[0.97]"
           >
             {content.hero.ctaSecondary}
           </button>
@@ -125,7 +125,7 @@ export function Hero() {
 
       {/* Scroll indicator */}
       <div
-        className="hero-fade absolute bottom-10 left-1/2 -translate-x-1/2"
+        className="hero-fade absolute bottom-10 left-1/2 hidden -translate-x-1/2 md:flex"
         aria-hidden="true"
       >
         <button

@@ -321,7 +321,7 @@ export function Contact() {
                     className={inputClass}
                   />
                   {errors.nombre && (
-                    <p id="nombre-error" role="alert" className="text-xs text-red-400">
+                    <p id="nombre-error" role="alert" className="text-sm text-red-400">
                       {errors.nombre}
                     </p>
                   )}
@@ -343,7 +343,7 @@ export function Contact() {
                     className={inputClass}
                   />
                   {errors.email && (
-                    <p id="email-error" role="alert" className="text-xs text-red-400">
+                    <p id="email-error" role="alert" className="text-sm text-red-400">
                       {errors.email}
                     </p>
                   )}
@@ -434,7 +434,7 @@ export function Contact() {
                   className={`${inputClass} resize-none`}
                 />
                 {errors.mensaje && (
-                  <p id="mensaje-error" role="alert" className="text-xs text-red-400">
+                  <p id="mensaje-error" role="alert" className="text-sm text-red-400">
                     {errors.mensaje}
                   </p>
                 )}
@@ -444,7 +444,7 @@ export function Contact() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full cursor-pointer rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-background shadow-[0_0_20px_hsl(0_0%_100%_/_0.1)] transition-all duration-300 hover:bg-accent/90 hover:shadow-[0_0_32px_hsl(0_0%_100%_/_0.15)] disabled:cursor-not-allowed disabled:opacity-60"
+                className="w-full cursor-pointer rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-background shadow-[0_0_20px_hsl(0_0%_100%_/_0.1)] transition-all duration-300 hover:bg-accent/90 hover:shadow-[0_0_32px_hsl(0_0%_100%_/_0.15)] active:scale-[0.97] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 {status === "loading" ? f.submitting : f.submit}
               </button>

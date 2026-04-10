@@ -61,6 +61,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   min-height: 100dvh;
+  touch-action: manipulation;
 }
 
 /* Noise texture overlay — rendered via dedicated component to avoid

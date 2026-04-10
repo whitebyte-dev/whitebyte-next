@@ -111,7 +111,7 @@ export function Process() {
             />
           </div>
 
-          <div className="grid gap-8 md:grid-cols-4">
+          <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-4">
             {p.steps.map((step) => (
               <div key={step.number} className="process-step card-glow-wrap group">
                 <div className="card-glow-inner relative overflow-hidden px-8 pb-10 pt-14 text-center">

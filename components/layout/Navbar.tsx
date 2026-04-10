@@ -106,7 +106,7 @@ export function Navbar() {
           : "bg-background border-b border-transparent"
       }`}
     >
-      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-10">
+      <div className="mx-auto flex h-20 max-w-[1400px] items-center justify-between px-6 md:px-10">
         {/* Logo */}
         <Link
           href="/"
@@ -224,7 +224,7 @@ export function Navbar() {
             <Link
               href="/contacto"
               onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-white px-8 py-3.5 text-center text-sm font-medium text-background transition-all hover:bg-white/90"
+              className="mt-4 rounded-full bg-white px-8 py-3.5 text-center text-sm font-medium text-background transition-all hover:bg-white/90 active:scale-[0.97]"
             >
               {content.nav.cta}
             </Link>

@@ -31,14 +31,14 @@ export default function NotFound() {
         <div className="relative text-center">
           {/* Big 404 watermark */}
           <div className="pointer-events-none select-none" aria-hidden="true">
-            <span className="font-display text-[12rem] font-bold leading-none text-white/[0.03] md:text-[16rem]">
+            <span className="font-display text-[8rem] font-bold leading-none text-white/[0.03] sm:text-[12rem] md:text-[16rem]">
               404
             </span>
           </div>
 
           {/* Content overlaid on watermark */}
           <div className="-mt-20 md:-mt-28">
-            <h1 className="font-display text-4xl font-semibold text-text-primary md:text-5xl">
+            <h1 className="font-display text-3xl font-semibold text-text-primary sm:text-4xl md:text-5xl">
               {c.title}{" "}
               <span className="font-[family-name:var(--font-serif-accent)] italic font-normal text-text-secondary">
                 {c.titleAccent}
@@ -52,7 +52,7 @@ export default function NotFound() {
             <div className="mt-10">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-3.5 text-sm font-medium text-background transition-all duration-300 hover:bg-white/90"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white px-8 py-3.5 text-sm font-medium text-background transition-all duration-300 hover:bg-white/90 active:scale-[0.97]"
               >
                 <ArrowLeft size={16} aria-hidden="true" />
                 {c.cta}

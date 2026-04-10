@@ -65,7 +65,7 @@ export function CtaBanner() {
 
       <div ref={containerRef} className="relative mx-auto max-w-4xl px-8 py-36">
         <div className="cta-content text-center">
-          <h2 className="font-display text-5xl font-semibold text-text-primary md:text-6xl lg:text-7xl">
+          <h2 className="font-display text-4xl font-semibold text-text-primary sm:text-5xl md:text-6xl lg:text-7xl">
             {c.headline}{" "}
             <span
               className="font-[family-name:var(--font-serif-accent)] italic font-normal bg-gradient-to-r from-[hsl(35_40%_65%)] to-[hsl(25_35%_55%)] bg-clip-text text-transparent"
@@ -82,7 +82,7 @@ export function CtaBanner() {
             <span className="pill-glow-wrap group inline-flex">
               <Link
                 href="/contacto"
-                className="inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 group-hover:bg-white/95"
+                className="inline-flex items-center gap-2.5 rounded-full bg-white px-10 py-4 text-base font-medium text-background transition-all duration-300 group-hover:bg-white/95 active:scale-[0.97]"
               >
                 {c.button}
                 <ArrowRight

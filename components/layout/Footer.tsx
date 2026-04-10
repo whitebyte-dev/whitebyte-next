@@ -151,9 +151,9 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.label}
-                className="text-text-muted transition-colors duration-200 hover:text-text-primary"
+                className="flex h-11 w-11 items-center justify-center rounded-full text-text-muted transition-colors duration-200 hover:text-text-primary"
               >
-                <social.icon size={18} />
+                <social.icon size={20} />
               </a>
             ))}
           </div>
