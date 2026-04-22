@@ -1,5 +1,6 @@
 "use client"
 
+import { useCallback } from "react"
 import {
   ReactCompareSlider,
   ReactCompareSliderImage,
@@ -23,9 +24,20 @@ export function CompareSlider({
   beforeAlt,
   afterAlt,
 }: CompareSliderProps) {
+  const stopLenis = useCallback(() => {
+    window.__lenis?.stop()
+  }, [])
+
+  const startLenis = useCallback(() => {
+    window.__lenis?.start()
+  }, [])
+
   return (
     <ReactCompareSlider
-      className="overflow-hidden rounded-t-xl"
+      className="overflow-hidden rounded-t-xl touch-none"
+      onPointerDown={stopLenis}
+      onPointerUp={startLenis}
+      onPointerCancel={startLenis}
       handle={
         <div className="flex h-full items-center justify-center">
           <div className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-accent bg-background shadow-lg">
