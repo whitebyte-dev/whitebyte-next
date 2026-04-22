@@ -98,7 +98,7 @@ export function Solutions() {
                 key={item.title}
                 className="solution-card card-glow-wrap group"
               >
-                <div className="card-glow-inner p-8 backdrop-blur-sm">
+                <div className="card-glow-inner p-6 backdrop-blur-sm md:p-8">
                   {/* Accent line on top */}
                   <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
